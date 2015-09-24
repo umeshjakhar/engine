@@ -27,7 +27,7 @@ fs.readFile('Posts.xml', {encoding: 'utf-8'}, function(err, data) {
   };
 
   json.posts.row.forEach(function(post, index) {
-    bulkBody.push({index: {_index: 'coffee', _type: 'posts', _id: post.Id}});
+    bulkBody.push({index: {_index: 'my_index', _type: 'posts', _id: post.Id}});
     post.Tags = post.Tags ? splitTags(post.Tags) : []; 
     bulkBody.push(post);
   });
