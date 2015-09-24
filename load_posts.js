@@ -5,8 +5,9 @@ parser = require('xml2json');
 elasticsearch = require('elasticsearch');
 
 client = new elasticsearch.Client({
-  host: '',
-  log: 'trace'
+  host: 'https://jwBjRop5EmfzeVipk2QsqRygcYJ0yXI1:@geet.east-us.azr.facetflow.io',
+  log: 'trace',
+  apiVersion: '1.0'
 });
 
 fs.readFile('Posts.xml', {encoding: 'utf-8'}, function(err, data) {
